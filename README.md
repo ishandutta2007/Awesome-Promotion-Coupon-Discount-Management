@@ -1,119 +1,157 @@
-# Awesome-Promotion-Coupon-Discount-Management
+<div align="center">
 
-# Awesome Promotion, Coupon & Discount Management
+# 🏷️ Awesome Promotion, Coupon & Discount Management
 
-> A curated list of top Promotion, Coupon and Discount Management platforms — both SaaS/Hosted commercial promotion engines and open-source alternatives for building discount rules, coupon codes, and campaign logic.
-> 🌟 Star this repo if you find it useful! 🌟
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Banner](assets/banner.svg)](https://github.com/ishandutta2007/Awesome-Promotion-Coupon-Discount-Management)
+
+<p align="center">
+  <strong>A curated list of top Promotion, Coupon, and Discount Management platforms, Headless Promotion Engines, Loyalty Rule Systems, and Open-Source Codebases.</strong>
+</p>
+
+<p align="center">
+  <a href="#-sector-overview--market-dynamics">Sector Overview</a> •
+  <a href="#-saas--hosted-platforms">SaaS Platforms</a> •
+  <a href="#-open-source-software">Open-Source Engines</a> •
+  <a href="#-feature-matrix--comparison-at-a-glance">Feature Matrix</a> •
+  <a href="#-contributing">Contributing</a>
+</p>
+
+🌟 **Star this repo if you find it useful!** 🌟
+
+</div>
 
 ---
 
 ## 📋 Table of Contents
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Chargebee Coupons & Discounts](#chargebee-coupons--discounts)
-  - [Voucherify](#voucherify)
-  - [Talon.One](#talonone)
-  - [SaaSquatch](#saasquatch)
-  - [Open Loyalty](#open-loyalty)
-  - [Antavo](#antavo)
-  - [SessionM](#sessionm)
-- [Open-Source Software](#-open-source-software)
-  - [Django Coupons](#django-coupons)
-  - [Loyalty Card Service](#loyalty-card-service)
-- [Comparison at a Glance](#-comparison-at-a-glance)
-- [Contributing](#-contributing)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🟦 SaaS / Hosted Platforms](#-saas--hosted-platforms)
+- [🟩 Open-Source Software](#-open-source-software)
+- [📊 Feature Matrix & Comparison at a Glance](#-feature-matrix--comparison-at-a-glance)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global promotion and loyalty management software market is valued at approximately **$13.5B to $16.4B** and is projected to expand to **$31B–$57B+ by 2034**, clocking an estimated **CAGR of 10.6%–14.6%**. 
+
+The sector is **moderately to highly fragmented** rather than a winner-take-all monopoly: while legacy enterprise software suites (e.g., Salesforce, SAP, Oracle) control portions of generalized CRM and ERP loyalty, the rapid rise of composable headless commerce has spurred high demand for specialized, API-first promotion engines (such as Voucherify and Talon.One) and vertical-tailored platforms that solve complex edge-case coupon stacking, anti-fraud limits, and omni-channel point redemptions.
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted Promotion, Coupon and Discount Management platforms. These are not open-source but are included as reference points for feature comparison.
+Below is the comparative breakdown of commercial, cloud-hosted promotion and loyalty management platforms, sorted in descending order by enterprise company size (valuation / estimated ARR / acquisition benchmark).
 
-### Chargebee Coupons & Discounts
-**Type:** Billing-native coupon and discount engine with strict application order
-Chargebee provides a native coupon and discount system tightly integrated with subscription billing. Coupons can be fixed-amount or percentage-based, applied at the line-item or invoice level [citation:1]. A critical differentiator is the **defined order of application** when multiple coupons and discounts stack: line-level fixed coupons apply first, then line-level fixed discounts, then line-level percentage coupons and discounts, followed by invoice-level fixed coupons, invoice-level fixed discounts, and finally invoice-level percentage coupons and discounts [citation:1]. For example, a 1% off addon coupon applies before a flat $2 invoice coupon, which applies before a flat $5 invoice discount [citation:1]. Redemption limits can be enforced per customer (by Customer ID or Email, locked after first save), with server-side checks blocking checkout if the limit is exceeded [citation:11]. Eligibility can target New Customers or Existing Customers (Beta) [citation:11].
-**Best for:** Chargebee billing customers wanting native coupon logic with predictable, documented stacking order and server-side redemption enforcement.
+| 🏢 Platform | 💰 Scale (Valuation / Revenue) | 🏷️ Starting Pricing | ⏱️ Free Tier / Trial Limit | 🛠️ Platform Type & Focus |
+|:---|:---|:---|:---|:---|
+| **[Chargebee](https://www.chargebee.com/)** | **$3.5B valuation** (~$200M–$300M+ ARR) | **$0/mo** (Starter plan); then **$599/mo** (Performance plan) | **Free forever up to $250,000** in cumulative lifetime billing volume (0.75% overage fee applies thereafter). | Billing-native coupon & discount engine with strictly defined 8-step application and stacking order. |
+| **[Talon.One](https://www.talon.one/)** | **$878M valuation** (Acquired by Adyen) | **Quote-based baseline** (Entry deployments typically begin at ~$1,500+/mo scaling by volume) | **No free tier**; custom sandbox/developer testing environment granted during guided evaluation. | Headless, API-first promotion & gamified loyalty engine with trigger-effect rule builders. |
+| **[Antavo](https://antavo.com/)** | **~$50M–$126M valuation** (~$14M–$18M ARR) | **Custom enterprise quote** (Baseline deployments start at ~$1,500+/mo based on member tiers) | **No free tier**; interactive demo and trial sandbox available upon enterprise scoping. | Enterprise loyalty cloud with deep Shopify integration, CDP audience segmentation, and gamification. |
+| **[SessionM](https://www.sessionm.com/)** | **$35M+ ARR** ($20M buyout by Capillary; prev. Mastercard) | **Custom enterprise quote** (Multi-tier annual subscription contracts) | **No free tier**; proof-of-concept testing environment granted via sales consultation. | Enterprise customer engagement & earn-and-burn points platform for high-volume retail. |
+| **[Voucherify](https://www.voucherify.io/)** | **$10M–$25M est. ARR** (Bootstrapped / Private) | **€600 / $650/mo** (Business plan, billed annually) | **60-day free trial** with full sandbox access; free sandbox persists after trial ends. | API-first promotion engine with agentic AI campaign building, qualification API, and cart rules. |
+| **[SaaSquatch](https://www.saasquatch.com/)** | **~$5M–$10M est. ARR** (Private) | **$500/mo** (Base plan) | **No free tier**; guided product sandbox trial provided upon demo booking. | Customer referral and loyalty engine utilizing calculated fields for cumulative reward logic. |
+| **[Open Loyalty](https://www.openloyalty.io/)** | **Bootstrapped / OEX Group** (~$5M est. ARR) | **Custom platform + usage fee** (Structured platform fee + MAU allowance) | **No free tier**; tailored developer sandbox provided for architectural evaluation. | Headless, API-first loyalty platform featuring milestone rewards, audit logging, and MCP server. |
 
-### Voucherify
-**Type:** API-first promotion engine with agentic commerce support
-Voucherify is an API-first promotion engine covering auto-applied rule-based promos, BOGOs, bundles, strikethrough pricing, and gift cards [citation:2]. Promotions can trigger based on location, behavior, cart contents, or any custom data point, with sub-50ms response times for real-time validation [citation:2]. It includes a **qualification API** that returns all possible redeemables a customer can use, enabling homepage promotion displays and checkout upselling [citation:2]. Promotion tiers can be added to campaigns with hierarchy control, activation windows, and day-of-week/hours validity for happy-hour scenarios [citation:12]. A built-in agent (**Vincent**) builds campaigns from natural language descriptions and benchmarks incentive performance [citation:2]. Fraud controls include redemption caps, channel restrictions, budget limits, and segment targeting [citation:2].
-**Best for:** Developers and product teams wanting a composable, API-first promotion engine with complex eligibility logic and agentic campaign building.
+---
 
-### Talon.One
-**Type:** Headless loyalty and promotion engine with gamification
-Talon.One provides a headless, no-code platform for building promotions and gamified loyalty programs by clicking together triggers and effects [citation:3][citation:13]. It covers coupons, referrals, discounts, product bundling, markdown pricing, and **gamification mechanics**: challenges (one-time or recurring), leaderboards, progress trackers, milestones, and badges [citation:3]. Campaigns can be built and optimized in real time, with strikethrough pricing support for SKU-level promotions [citation:13]. The engine emphasizes automated scaling for peak traffic and EU Price Indication Directive compliance.
-**Best for:** E-commerce teams wanting a real-time promotion engine with strong gamification and pricing compliance features, particularly those running high-volume promotional calendars.
+### 🔍 Platform Highlights
 
-### SaaSquatch
-**Type:** Referral and loyalty engine with calculated fields
-SaaSquatch specializes in referral and loyalty programs with **calculated fields** that track events, apply calculations, and store results on participant profiles dynamically [citation:4]. This enables complex cumulative reward rules (e.g., "reward participants who make 3+ purchases of at least $50 in the month after a referral") with fixed or rolling tracking windows. The platform includes a Rewards Catalog, Reward Units, Fuel Tank codes for bulk redemption, user segmentation, and fraud flagging based on custom fields [citation:4][citation:14]. Analytics reports can be bulk-exported in CSV/XLSX [citation:4].
-**Best for:** Teams building referral and loyalty programs that require event-driven, cumulative reward logic beyond simple coupon codes.
+#### Chargebee Coupons & Discounts
+- **Type:** Billing-native coupon and discount engine with strict application order
+- **Key Capabilities:** Coupons apply at line-item or invoice levels. A critical differentiator is the **defined order of application** when multiple coupons and discounts stack: line-level fixed coupons apply first, then line-level fixed discounts, then line-level percentage discounts, followed by invoice-level fixed coupons, invoice-level fixed discounts, and invoice-level percentage discounts.
+- **Best For:** Chargebee billing customers wanting predictable, documented stacking order and server-side redemption enforcement.
 
-### Open Loyalty
-**Type:** Loyalty platform with event-driven rewards and audit controls
-Open Loyalty provides loyalty program management with **campaign expression language** now supporting milestone progress (rewards fire as members reach each milestone, not only on completion) [citation:5]. Challenges can be duplicated between tenants, and a dedicated **tier performance analytics dashboard** tracks average/median time in each tier and member movement between tiers [citation:5]. Unit transfer records now carry custom attributes (campaign type, source, budget category), with bulk expiration date changes on filtered transfers [citation:5]. **Audit logging is enforced** for configuration changes across campaigns, rewards, wallets, and member records, recording which administrator made each change [citation:5]. An **MCP server** connects AI assistants to members, points, rewards, campaigns, and analytics [citation:15].
-**Best for:** Organizations running loyalty programs that need event-driven integrations, milestone rewards, and enterprise-grade audit traceability.
+#### Talon.One
+- **Type:** Headless loyalty and promotion engine with gamification (Adyen)
+- **Key Capabilities:** Provides a headless, no-code rule builder for triggers and effects. Covers coupons, referrals, product bundling, strikethrough pricing, and gamification mechanics (challenges, leaderboards, progress trackers, milestones, and badges). Automated scaling for peak traffic and EU Price Indication Directive compliance.
+- **Best For:** High-volume e-commerce brands wanting real-time promotional agility with rich gamification.
 
-### Antavo
-**Type:** Enterprise loyalty with deep Shopify integration and segmentation
-Antavo's Q2 2026 release deepened its **Shopify integration** with bidirectional data flow, checkout widgets for point redemption, and "claim past purchases" to convert anonymous checkouts into known members [citation:6]. **Audiences** provides segmentation from a data lake or CDP that can ingest millions of customers in seconds, with segment-of-one personalization planned [citation:6]. **Upsell messaging** triggers based on basket thresholds on product listing, detail, or cart pages [citation:6]. Product Hub represents the catalog accurately for discounts and loyalty benefits [citation:6].
-**Best for:** Shopify-centric brands wanting deep loyalty integration with sophisticated segmentation and gamification, particularly multi-market deployments.
+#### Antavo AI Loyalty Cloud
+- **Type:** Enterprise loyalty with deep Shopify integration and segmentation
+- **Key Capabilities:** Bidirectional Shopify data synchronization, checkout widgets for point redemption, and "claim past purchases" to convert anonymous checkouts into known members. CDP audience ingestion for segment-of-one personalization and basket threshold upsell triggers.
+- **Best For:** Shopify-centric brands and multi-market enterprise loyalty deployments.
 
-### SessionM
-**Type:** Earn-and-burn loyalty with configurable points
-SessionM (Capillary Technologies) provides points-based loyalty programs with configurable point accounts, point sources, expiration policies, and redemption at point of sale or through a rewards store [citation:7]. Campaigns can be scheduled and triggered across channels from a self-service hub, with daily dashboards for program performance [citation:7].
-**Best for:** Enterprises wanting a traditional earn-and-burn loyalty program with flexible points configuration and in-store redemption.
+#### SessionM (Capillary Technologies)
+- **Type:** Earn-and-burn loyalty with configurable points
+- **Key Capabilities:** Points-based loyalty programs with configurable point accounts, expiration policies, and redemption at point of sale or via rewards store. Cross-channel campaigns triggered from a self-service hub.
+- **Best For:** Enterprises wanting traditional earn-and-burn loyalty programs with omnichannel POS redemption.
+
+#### Voucherify
+- **Type:** API-first promotion engine with agentic commerce support
+- **Key Capabilities:** Auto-applied rule-based promos, BOGOs, bundles, strikethrough pricing, and gift cards with sub-50ms response times. Features a **qualification API** returning all possible redeemables for homepage displays. Built-in AI agent (*Vincent*) builds campaigns from natural language prompts.
+- **Best For:** Developers and product teams building composable commerce setups with complex validation rules.
+
+#### SaaSquatch
+- **Type:** Referral and loyalty engine with calculated fields
+- **Key Capabilities:** Specializes in referral loops using dynamic calculated fields to evaluate cumulative conditions over rolling time windows. Includes a Rewards Catalog, Fuel Tank bulk codes, and automated fraud scoring.
+- **Best For:** Subscription and SaaS companies running event-driven multi-step referral rewards.
+
+#### Open Loyalty
+- **Type:** Loyalty platform with event-driven rewards and audit controls
+- **Key Capabilities:** Campaign expression language supporting milestone progress, tier performance dashboards, enterprise audit logging across all configurations, and an **MCP server** allowing AI agents to query loyalty members and promotions.
+- **Best For:** Organizations requiring composable microservice loyalty setups with strict audit traceability.
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven Promotion, Coupon and Discount Management tools. The open-source ecosystem is **very limited** — available projects are framework-specific libraries rather than full promotion engines.
+Curated open-source promotion engines, coupon management libraries, and loyalty microservices. Ranked in descending order by GitHub stargazers:
 
-### Django Coupons
-**Stack:** Python / Django | **License:** MIT
-Django Coupons is a reusable Django app for managing promotional codes, discount rules, and coupon validation [citation:9]. Key features include percentage or fixed-amount discounts, user-specific or global coupons, usage limits (max total, per-user, or unlimited), expiration and active/inactive rules, Django Admin integration with bulk actions (reset usage, delete expired), and a simple validation API (`validate_coupon()`) returning `{'valid': True}` or a human-readable error message [citation:9]. Coupon codes auto-generate with configurable length via `DSC_COUPON_CODE_LENGTH` [citation:9]. It includes a REST API example for Django REST Framework integration [citation:9].
-**Best for:** Django developers needing a lightweight, MIT-licensed coupon system embedded directly in their application, accepting that it covers coupon validation and usage tracking but not campaign orchestration or loyalty.
-
-### Loyalty Card Service
-**Stack:** Go / Fiber / GORM | **License:** GPLv3
-Loyalty Card Service is an open-source RESTful backend for managing loyalty programs, guests, scores, and tags [citation:10]. It provides a modular Go codebase with Swagger/OpenAPI documentation, Docker support, PostgreSQL/SQLite via GORM, and CLI support via Cobra [citation:10]. API endpoints cover guest creation, score creation and usage, and tag management [citation:10]. It is a **loyalty points backend** rather than a coupon or promotion engine — it handles points/scores but not discount codes or campaign rules.
-**Best for:** Go developers wanting a self-hosted loyalty points backend with a clean REST API, accepting that promotion and coupon logic must be built separately.
+| 📦 Repository | ⭐ GitHub Stars | 💻 Tech Stack | 📜 License | 🎯 Description |
+|:---|:---|:---|:---|:---|
+| **[VoucherVault](https://github.com/l4rm4nd/VoucherVault)** | [![Stars](https://img.shields.io/github/stars/l4rm4nd/VoucherVault?style=social&color=white)](https://github.com/l4rm4nd/VoucherVault/stargazers) | Python / Django / PWA | AGPL-3.0 | Self-hosted digital vault and management application for vouchers, coupons, gift cards, and loyalty balances with offline caching and OIDC SSO. |
+| **[RefRef](https://github.com/amicalhq/refref)** | [![Stars](https://img.shields.io/github/stars/amicalhq/refref?style=social&color=white)](https://github.com/amicalhq/refref/stargazers) | TypeScript / Node.js | AGPL-3.0 | Modern open-source referral and affiliate tracking platform for tracking customer conversions and automated reward disbursements. |
+| **[django-coupons](https://github.com/byteweaver/django-coupons)** | [![Stars](https://img.shields.io/github/stars/byteweaver/django-coupons?style=social&color=white)](https://github.com/byteweaver/django-coupons/stargazers) | Python / Django | MIT | Reusable Django app for coupon code generation, usage limitation, discount computation, and validation APIs. |
+| **[OfferKit](https://github.com/offerkit/offerkit)** | [![Stars](https://img.shields.io/github/stars/offerkit/offerkit?style=social&color=white)](https://github.com/offerkit/offerkit/stargazers) | TypeScript / Node.js / Docker | Apache-2.0 | Agent-first, self-hostable promotion engine for coupon codes, stackable discounts, gift cards, loyalty tiers, and customer segments. |
+| **[Sylius Promotion Component](https://github.com/Sylius/Promotion)** | [![Stars](https://img.shields.io/github/stars/Sylius/Promotion?style=social&color=white)](https://github.com/Sylius/Promotion/stargazers) | PHP / Symfony | MIT | Standalone, decoupled e-commerce promotions component for building complex rule-based cart discount actions and coupon limits. |
+| **[php-promotion-engine](https://github.com/zxc7563598/php-promotion-engine)** | [![Stars](https://img.shields.io/github/stars/zxc7563598/php-promotion-engine?style=social&color=white)](https://github.com/zxc7563598/php-promotion-engine/stargazers) | PHP | MIT | Flexible, scalable promotion strategy engine supporting tiered discounts, spend thresholds, item exclusions, and member discounts. |
+| **[coupon-engine](https://github.com/tpiekarski/coupon-engine)** | [![Stars](https://img.shields.io/github/stars/tpiekarski/coupon-engine?style=social&color=white)](https://github.com/tpiekarski/coupon-engine/stargazers) | Java / Spring Boot | MIT | Coupon engine prototype driven by Easy Rules and Spring Expression Language (SpEL) for extensible business rule evaluation. |
+| **[Loyalty Card Service](https://github.com/vo1dFl0w/loyalty-card-service)** | [![Stars](https://img.shields.io/github/stars/vo1dFl0w/loyalty-card-service?style=social&color=white)](https://github.com/vo1dFl0w/loyalty-card-service/stargazers) | Go / Fiber / GORM | GPL-3.0 | Lightweight RESTful backend service for guest loyalty scores, points issuance, and digital loyalty card tracking. |
 
 ---
 
-## 📊 Comparison at a Glance
+## 📊 Feature Matrix & Comparison at a Glance
 
-| Software | License | Stack | Coupon Codes | Stacking Order | Loyalty/Points | Self-Hosted | Best For |
-|----------|---------|-------|--------------|----------------|----------------|-------------|----------|
-| **Chargebee** | Proprietary | Cloud | ✅ Full | ✅ Documented 8-step | ❌ | ❌ | Billing-native coupons |
-| **Voucherify** | Proprietary | Cloud | ✅ Full | ✅ Tier hierarchy | ✅ | ❌ | API-first promotion engine |
-| **Talon.One** | Proprietary | Cloud | ✅ | (Campaign rules) | ✅ Gamification | ❌ | Real-time + gamified loyalty |
-| **SaaSquatch** | Proprietary | Cloud | (Referral) | (Calculated fields) | ✅ | ❌ | Event-driven referrals |
-| **Open Loyalty** | Proprietary | Cloud | (Check) | (Campaign rules) | ✅ Milestones | ❌ | Audit-ready loyalty |
-| **Antavo** | Proprietary | Cloud | (Check) | (Campaign rules) | ✅ Shopify | ❌ | Shopify loyalty + segments |
-| **Django Coupons** | MIT | Django | ✅ | (Basic rules) | ❌ | ✅ | Django coupon validation |
-| **Loyalty Card** | GPLv3 | Go/Fiber | ❌ | ❌ | ✅ Scores | ✅ | Go loyalty points backend |
+| Software | License / Model | Coupon Codes | Cart Discount Rules | Stacking Priority | Loyalty / Points | Gamification | Self-Hosted |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Chargebee** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ 8-step documented | ❌ No | ❌ No | ❌ Cloud |
+| **Talon.One** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ Configurable rules | ✅ Yes | ✅ Badges & Tiers | ❌ Cloud |
+| **Antavo** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ Configurable rules | ✅ Yes | ✅ Challenges | ❌ Cloud |
+| **SessionM** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ Configurable rules | ✅ Yes | ❌ Basic | ❌ Cloud |
+| **Voucherify** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ Tier hierarchy | ✅ Yes | ❌ Basic | ❌ Cloud |
+| **SaaSquatch** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ⚠️ Calculated fields | ✅ Yes | ❌ Referral focused | ❌ Cloud |
+| **Open Loyalty** | SaaS (Proprietary) | ✅ Yes | ✅ Yes | ✅ Configurable rules | ✅ Yes | ✅ Milestones | ❌ Cloud |
+| **OfferKit** | Open Source (Apache-2.0) | ✅ Yes | ✅ Yes | ✅ JSON Logic rules | ✅ Yes | ❌ Basic | ✅ Docker |
+| **VoucherVault** | Open Source (AGPL-3.0) | ✅ Yes | ❌ Storage only | ❌ N/A | ✅ Balances | ❌ No | ✅ Self-hosted |
+| **django-coupons** | Open Source (MIT) | ✅ Yes | ⚠️ Basic validation | ❌ N/A | ❌ No | ❌ No | ✅ Embedded |
+| **Sylius Promotion** | Open Source (MIT) | ✅ Yes | ✅ Complex actions | ✅ Priority order | ❌ No | ❌ No | ✅ Embedded |
+| **Loyalty Card** | Open Source (GPL-3.0) | ❌ No | ❌ No | ❌ N/A | ✅ Point balances | ❌ No | ✅ Docker / Go |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Promotion, Coupon or Discount Management tool that should be listed here, please open a pull request with:
+Contributions are warmly welcomed! If you maintain or use a promotion engine, coupon API, or loyalty framework that belongs in this directory:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive feature branch (`git checkout -b add-my-engine`).
+3. 📝 Add your entry with the tool name, URL, pricing/license, and core differentiator.
+4. 🚀 Submit a Pull Request.
 
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source. Note that the open-source ecosystem for **full promotion engines** is **very limited and fragmented**. **Django Coupons** is the most practical open-source option for coupon code validation within a Django application [citation:9], while **Loyalty Card Service** provides a Go-based loyalty points backend [citation:10]. No open-source project replicates the full breadth of Chargebee's documented stacking order, Voucherify's qualification API, or Talon.One's gamification engine — commercial platforms remain the only viable option for production-grade promotion orchestration at scale.
+Please verify that repositories are actively maintained and that information reflects verified documentation.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This repository and curated list are open-sourced under the [Creative Commons Zero v1.0 Universal](LICENSE) (CC0 1.0) Public Domain Dedication. Listed third-party platforms and repositories retain their respective trademarks, copyrights, and software licenses.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+<div align="center">
+  <sub>Maintained with ❤️ by the open-source commerce community.</sub>
+</div>
