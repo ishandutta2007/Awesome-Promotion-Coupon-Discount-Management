@@ -108,7 +108,7 @@ Below is the comparative breakdown of commercial, cloud-hosted promotion and loy
 
 Curated open-source promotion engines, coupon management libraries, and loyalty microservices. Ranked in descending order by GitHub stargazers:
 
-| 📦 Repository | ⭐ GitHub Stars | 💻 Tech Stack | 📜 License | 🎯 Description |
+| 📦 Repository | ⭐ GitHub_Stars | 💻 Tech Stack | 📜 License | 🎯 Description |
 |:---|:---|:---|:---|:---|
 | **[VoucherVault](https://github.com/l4rm4nd/VoucherVault)** | [![Stars](https://img.shields.io/github/stars/l4rm4nd/VoucherVault?style=social&color=white)](https://github.com/l4rm4nd/VoucherVault/stargazers) | Python / Django / PWA | AGPL-3.0 | Self-hosted digital vault and management application for vouchers, coupons, gift cards, and loyalty balances with offline caching and OIDC SSO. |
 | **[RefRef](https://github.com/amicalhq/refref)** | [![Stars](https://img.shields.io/github/stars/amicalhq/refref?style=social&color=white)](https://github.com/amicalhq/refref/stargazers) | TypeScript / Node.js | AGPL-3.0 | Modern open-source referral and affiliate tracking platform for tracking customer conversions and automated reward disbursements. |
