@@ -2,7 +2,12 @@
 
 # 🏷️ Awesome Promotion, Coupon & Discount Management
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+
+<br/>
+
 [![Banner](assets/banner.svg)](https://github.com/ishandutta2007/Awesome-Promotion-Coupon-Discount-Management)
 
 <p align="center">
@@ -30,6 +35,8 @@
 - [🟩 Open-Source Software](#-open-source-software)
 - [📊 Feature Matrix & Comparison at a Glance](#-feature-matrix--comparison-at-a-glance)
 - [🤝 Contributing](#-contributing)
+- [💖 Support](#-support)
+- [📈 Star History](#-star-history)
 - [📄 License](#-license)
 
 ---
@@ -143,6 +150,29 @@ Contributions are warmly welcomed! If you maintain or use a promotion engine, co
 4. 🚀 Submit a Pull Request.
 
 Please verify that repositories are actively maintained and that information reflects verified documentation.
+
+---
+
+## 💖 Support
+
+Thank you for visiting and supporting this project! If you find this curated directory helpful for evaluating or building promotion engines, discount systems, and loyalty architectures, please consider supporting the project:
+
+- ⭐ **Star** this repository to help others discover it.
+- 🍴 **Fork** and contribute newly discovered engines, fixes, or documentation updates.
+- 📢 **Share** this collection with your fellow developers, engineering teams, and community.
+- ☕ **Buy me a coffee**: If you'd like to show extra appreciation and support ongoing maintenance, consider sponsoring via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007):
+
+<div align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-%E2%98%95%20Buy%20me%20a%20coffee-yellow?style=for-the-badge&logo=githubsponsors" alt="Buy me a coffee on GitHub Sponsors" />
+  </a>
+</div>
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Promotion-Coupon-Discount-Management&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Promotion-Coupon-Discount-Management&type=date&legend=top-left)
 
 ---
 
